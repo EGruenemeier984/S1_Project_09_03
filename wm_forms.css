@@ -6,15 +6,25 @@
    Case Problem 3
 
    WidgetMage Form Styles
-   Author: 
-   Date:   
+   Author: Ethan Gruenemeier
+   Date: 1.15.19
 
    Filename: wm_forms.css
 
 */
 
 /* Field Set Styles */
+fieldset {
+    border: none;
+    width: 60%;
+    margin: 10px 0 10px 0;
+}
 
+fieldset>legend {
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    margin: 2px 0 2px 0;
+}
 
 
 
@@ -29,9 +39,3 @@
 
 
 /* Placeholder Styles */
-
-
-
-
-
-   
