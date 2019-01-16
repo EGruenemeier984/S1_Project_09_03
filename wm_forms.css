@@ -14,28 +14,102 @@
 */
 
 /* Field Set Styles */
+/* This effects the fieldset element and sets the border to none and the width to 60% also sets the top and bottom margins to 10px while the left and right are 0px. */
 fieldset {
     border: none;
     width: 60%;
     margin: 10px 0 10px 0;
 }
 
+/* This effects the legends in the fieldset and sets the background color to an rgb value. This also sets the width of 100% and the top and bottom margins to 2px while the left and right are 0px. */
 fieldset>legend {
     background-color: rgb(232, 232, 232);
     width: 100%;
     margin: 2px 0 2px 0;
 }
 
-
-
 /* DIV Styles */
-
-
-
+/* This effects the divs with the class of slider and floats them to the left, sets the width to 60% and sets the toop and bottom margins to 2px and the left and right are 0px. */
+div.slider {
+    float: left;
+    width: 60%;
+    margin: 2px 0 2px 0;
+}
 
 /* Control Styles */
+/* This effects the label and clears the left margin then floats it to the left and displays them as block. Also sets the width to 40%  and the top and bottom margins are set to 2px and the left and right are set to 0. */
+label {
+    clear: left;
+    float: left;
+    display: block;
+    width: 40%;
+    margin: 2px 0 2px 0;
+}
 
+/* This effects the input and select elements and sets the top and bottom margins to 2px and the left and right margins are set to 0px. */
+input,
+select {
+    margin: 2px 0 2px 0;
+}
 
+/* This effects the input element that has the type attribute set to range and sets the width to 60%. */
+input[type="range"] {
+    width: 60%;
+}
 
+/* This effects the select element and sets it to be displayed as a block element, floats them to the left, and the width is set to  the 120px. */
+select {
+    display: block;
+    float: left;
+    width: 120px;
+}
+
+/* This effects the inputs with the type of color and sets the displlay to block, floats them to the left, and sets the width to 75px. */
+input[type="color"] {
+    display: block;
+    float: left;
+    width: 75px;
+}
+
+/* This effects the textarea element and sets the font-size to 1.5em and sets the width and height. Also sets the bottom margin. */
+textarea {
+    font-size: 1.5em;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
 
 /* Placeholder Styles */
+/* This effects the placeholder with all three different web extension to ensure these styles will work across all modern browsers. The style rule effects the placeholder text of the textarea and sets the background color to an rgb value , the colro to an rgb value, plus makes the font-size 1.5em */
+textarea::-ms-placeholder {
+    background-color: rgb(255, 255, 191);
+
+    color: rgb(255, 151, 151);
+
+    font-size: 1.5em
+}
+
+textarea::-moz-placeholder {
+    background-color: rgb(255, 255, 191);
+
+    color: rgb(255, 151, 151);
+
+    font-size: 1.5em
+}
+
+textarea::-webkit-placeholder {
+
+    background-color: rgb(255, 255, 191);
+
+    color: rgb(255, 151, 151);
+
+    font-size: 1.5em;
+}
+
+textarea::placeholder {
+    background-color: rgb(255, 255, 191);
+
+    color: rgb(255, 151, 151);
+
+    font-size: 1.5em;
+}

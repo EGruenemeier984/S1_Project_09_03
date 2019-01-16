@@ -19,8 +19,8 @@
     <title>CSS Styles Demo</title>
     <link href="wm_reset.css" rel="stylesheet" />
     <link href="wm_styles.css" rel="stylesheet" />
+    <!-- links to all the external documents -->
     <link rel="stylesheet" href="wm_forms.css" />
-
     <script src="wm_script.js"></script>
 </head>
 
@@ -72,16 +72,19 @@
 
     <section>
         <h1>CSS Demo</h1>
-
-
-        <form action="">
-            <textarea name="sample" id="sampleBox" placeholder="Enter sample text and press the TAB key" autofocus
+        <form>
+            <!-- This is the text box that the user types the sample text in to and then it renders in the box at the bottom of the page. The attribute of autofocus is set so the box is automatically selected on page load. The tabindex is set to 1 so its the first tabindex and wrap is hard so all text wraps to the next line. -->
+            <textarea name="sampleText" id="sampleBox" placeholder="Enter sample text and press the TAB key" autofocus
                 tabindex="1" wrap="hard"></textarea>
+            <!-- This is the p tag that is instruction to the user. -->
             <p>Select the CSS style values from the form below and preview the effect on the sample text in the preview
                 box.</p>
+            <!-- This is the fieldset for the font stuff it has a legend of Fonts so the user knows these effect the font.  -->
             <fieldset>
                 <legend>Fonts</legend>
+                <!-- This is the label for font family and its for the input of font family. -->
                 <label for="fontfamily">Font Family</label>
+                <!-- This is the selection list that the user can choose there font and its seperated into opt groups so all the Genric fonts are grouped and all the specific fonts are grouped. -->
                 <select name="fontfamily" id="fontfamily">
                     <optgroup label="Generic Font">
                         <option value="default">default</option>
@@ -103,20 +106,20 @@
                         <option value="'Times New Roman'">'Times New Roman'</option>
                     </optgroup>
                 </select>
-
+                <!-- This is the label for fontstyle and its for the fontstyle input selection list. -->
                 <label for="fontstyle">Font Style</label>
                 <select name="fontstyle" id="fontstyle">
                     <option value="normal">normal</option>
                     <option value="italic">italic</option>
                     <option value="oblique">oblique</option>
                 </select>
-
+                <!-- This is the label for fontweigth and its for the selection list that the user can pick from either normal or bold font weight. -->
                 <label for="fontweight">Font Weight</label>
                 <select name="fontweight" id="fontweight">
                     <option value="normal">normal</option>
                     <option value="bold">bold</option>
                 </select>
-
+                <!-- This is the label for the text decoration and it is for the selection list that gives the option to the user to pick how the text should look. -->
                 <label for="textdecoration">Text Decoration</label>
                 <select name="textdecoration" id="textdecoration">
                     <option value="none">none</option>
@@ -124,7 +127,7 @@
                     <option value="overline">overline</option>
                     <option value="underline">underline</option>
                 </select>
-
+                <!-- This is the label for the text transform select list and is allows the user to choose the type of transform they wish to execute to upon the text. -->
                 <label for="texttransform">Text Transform</label>
                 <select name="texttransform" id="texttransform">
                     <option value="none">none</option>
@@ -132,59 +135,65 @@
                     <option value="lowercase">lowercase</option>
                     <option value="uppercase">uppercase</option>
                 </select>
-
+                <!-- This is the label for the font variant and the this effects the selection list so the user can choose between differnt font variants. -->
                 <label for="fontvariant">Font Variant</label>
                 <select name="fontvariant" id="fontvariant">
                     <option value="normal">normal</option>
                     <option value="small-caps">small-caps</option>
                 </select>
-
+                <!-- end fieldset -->
             </fieldset>
-
-            <fieldset label="Colors">
+            <!-- This is the fieldset for all the colors with a legend of colors so the user knows all these options have to do with the color. -->
+            <fieldset>
                 <legend>Colors</legend>
-
+                <!-- This is the lahel for color that lets the user choose the font color by using the built in color picker depending on the browser support, you can also manually type in a hexadecimal. -->
                 <label for="color">Font Color (hexadecimal)</label>
                 <input type="color" name="color" id="color" value="#000000" />
-
+                <!-- This is the label for the background color of the output and the user can choose this with the browsers color picker or by entering a hexadecimal instead. -->
                 <label for="backgroundcolor">Background Color (hexadecimal)</label>
                 <input type="color" name="backgroundcolor" id="backgroundcolor" placeholder="#rrggbb" value="#FFFFFF" />
+                <!-- end fieldset -->
             </fieldset>
-
-            <fieldset label="Sizes">
+            <!-- This is the fieldset for the size options to let the user know these options will effect the size of the input from the user. -->
+            <fieldset>
                 <legend>Sizes</legend>
-
+                <!-- This is the the label fot the font size input that is a slider and it uses the units of pixels to let the user choose the size of the outputted text.  -->
                 <label for="fontsize">Font Size (px)</label>
                 <div class="slider">
                     8
                     <input type="range" name="fontsize" id="fontsize" value="14" step="1" min="8" max="40" />
                     40
                 </div>
+                <!-- This is the label for letterspacing input that is a slider and lets the user choose the distance the letters have between them in the units of pixels. -->
                 <label for="letterspacing">Letter Spacing (px)</label>
                 <div class="slider">
                     0
                     <input type="range" name="letterspacing" id="letterspacing" value="0" step="1" min="0" max="10" />
                     10
                 </div>
+                <!-- This is the label for wordspacing that determines the space between each word in the units of pixels. -->
                 <label for="wordspacing">Word Spacing (px)</label>
                 <div class="slider">
                     0
                     <input type="range" name="wordspacing" id="wordspacing" value="0" step="1" min="0" max="10">
                     10
                 </div>
-                <label for="Line Height">Line height (em)</label>
+                <!-- This is the label for line height and it is for the input of lineheight and its a slider input. This allows the user to use a slider function to control the line height in the units of em. -->
+                <label for="lineheight">Line height (em)</label>
                 <div class="slider">
                     0
-                    <input type="range" name="wordspacing" id="wordspacing" value="1" step="0.2" min="0" max="4">
+                    <input type="range" name="lineheight" id="linehieght" value="1" step="0.2" min="0" max="4">
                     4
                 </div>
+                <!-- This is the label of text indent and is for the input of text indent this allows the user to select amount of indent should be displayed. -->
                 <label for="textindent">Text Indent (px)</label>
                 <div class="slider">
                     0
-                    <input type="range" name="textslider" id="textslider" value="0" step="1" min="0" max="10" />
+                    <input type="range" name="textindent" id="textindent" value="0" step="1" min="0" max="10" />
                     10
                 </div>
             </fieldset>
+            <!-- end fieldset -->
         </form>
 
 
